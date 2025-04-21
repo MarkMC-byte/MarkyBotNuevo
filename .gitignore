@@ -1,0 +1,28 @@
+# Archivos y carpetas de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Entornos virtuales
+env/
+venv/
+
+# Configuración de entorno
+.env
+
+# Archivos del sistema
+.DS_Store
+
+# Carpetas específicas del proyecto
+logs/
+datos/
+
+# Configuración del editor
+.vscode/
+.idea/
+
+# Salidas de compilación
+*.log
+*.sqlite3

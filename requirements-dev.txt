@@ -1,0 +1,12 @@
+torch==2.1.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+transformers
+accelerate
+opencv-python
+numpy
+pyttsx3
+SpeechRecognition
+sounddevice
+scipy
+discord.py
+requests
+python-dotenv
