@@ -1,4 +1,4 @@
-torch==2.1.0+cpu
+torch==2.1.0
 transformers
 accelerate
 opencv-python
@@ -10,3 +10,8 @@ scipy
 discord.py
 requests
 python-dotenv
+geopy
+timezonefinder
+pytz
+
+
