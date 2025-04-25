@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 *.pyc
+*.db
 
 # Entornos virtuales
 env/

@@ -13,7 +13,7 @@ def responder():
         respuesta = requests.post(
             "http://localhost:11434/api/generate",
             json={
-                "model": "mistral",
+                "model": "deepseek-llm",  # Cambiado a deepseek-llm
                 "prompt": mensaje,
                 "stream": False
             }
@@ -26,3 +26,4 @@ def responder():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
