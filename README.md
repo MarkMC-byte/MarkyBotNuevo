@@ -105,4 +105,4 @@ python bot.py
 ## 🙌 Créditos
 
 Desarrollado junto a **ChatGPT + [markurielMC]**  
-IA integrada: `mistral` con `Ollama`
+IA integrada: `deepseek` con `Ollama`

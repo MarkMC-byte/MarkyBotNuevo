@@ -14,4 +14,4 @@ Estos datos **no se almacenan** ni se comparten con terceros.
 ## Cambios en esta política
 Nos reservamos el derecho de modificar esta política en el futuro. Los cambios serán publicados en este documento.
 
-Si tienes alguna duda, puedes contactar al desarrollador: [mmaapp68@gmail.com](mailto:mmaapp68@gmail.com)
+Si tienes alguna duda, puedes contactar al desarrollador: [markuriel776@gmail.com](mailto:markuriel776@gmail.com)

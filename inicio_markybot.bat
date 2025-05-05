@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\marco.pedroza\Desktop\MarkyBotNuevo"
+cd /d "C:\Users\marco.pedroza\OneDrive - INEGI\Desktop\MarkyBotNuevo"
 echo Carpeta actual: %cd% > ruta_log.txt
 
 REM Verificar si Ollama ya está en ejecución
@@ -14,8 +14,9 @@ if %errorlevel%==0 (
 
 REM Iniciar ollama_api.py
 echo Lanzando ollama_api.py... >> ruta_log.txt
-start "" /min python ollama_api.py
+start "" /min cmd /c "python ollama_api.py"
+timeout /t 10 > nul
 
 REM Iniciar discord_bot.py
 echo Lanzando discord_bot.py... >> ruta_log.txt
-start "" /min python discord_bot.py
+start "" /min cmd /c "python discord_bot.py"

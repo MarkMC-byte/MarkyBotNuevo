@@ -10,4 +10,4 @@ Al usar MarkyBot, aceptas los siguientes términos:
 
 Este bot se encuentra en desarrollo y puede contener errores o comportamientos inesperados. Al usarlo, reconoces que estás participando en una versión en evolución del proyecto.
 
-Para más información, contacta al desarrollador: [mmaapp68@gmail.com](mailto:mmaapp68@gmail.com)
+Para más información, contacta al desarrollador: [markuriel776@gmail.com](mailto:markuriel776@gmail.com)
