@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 # Historial por usuario
 conversaciones = {}
 
-# Función para obtener emoji dependiendo de la respuesta
+# Función para obtener emoji dependiendo de la respuesta (estilo clásico)
 def obtener_emoji(respuesta):
     respuesta = respuesta.lower()
     if any(palabra in respuesta for palabra in ["gracias", "de nada"]):
@@ -30,7 +30,7 @@ def obtener_emoji(respuesta):
         return "⚠️"
     elif any(palabra in respuesta for palabra in ["hola", "bienvenido"]):
         return "👋"
-    elif any(palabra in respuesta for palabra in ["adiós", "hasta luego"]):
+    elif "adiós" in respuesta or "hasta luego" in respuesta:
         return "👋"
     elif "ayuda" in respuesta:
         return "🆘"
@@ -49,14 +49,14 @@ async def on_ready():
 # Hook para añadir cogs y sincronizar comandos slash
 @bot.event
 async def setup_hook():
-    await bot.add_cog(Moderacion(bot))  # ← Aquí agregamos la clase Moderacion correctamente
+    await bot.add_cog(Moderacion(bot))
     try:
         synced = await bot.tree.sync()
         print(f"✅ Comando slash sincronizado: {len(synced)} comandos.")
     except Exception as e:
         print(f"[ERROR al sincronizar comandos slash] {e}")
 
-# Comando !marky
+# Comando clásico !marky
 @bot.command(name='marky')
 async def preguntar_ia(ctx, *, pregunta: str):
     try:
@@ -86,7 +86,7 @@ async def preguntar_ia(ctx, *, pregunta: str):
         print(f"[ERROR] {e}")
         await ctx.send("⚠️ Error al conectarse con la IA.")
 
-# Comando /marky
+# Comando slash /marky
 @bot.tree.command(name="marky", description="Hazle una pregunta a Marky (IA)")
 @app_commands.describe(pregunta="Tu pregunta para Marky")
 async def slash_marky(interaction: discord.Interaction, pregunta: str):
@@ -115,6 +115,62 @@ async def slash_marky(interaction: discord.Interaction, pregunta: str):
     except Exception as e:
         print(f"[ERROR /marky] {e}")
         await interaction.followup.send("⚠️ Error al conectarse con la IA.")
+
+# Comando clásico !emojis
+@bot.command(name="emojis")
+async def mostrar_emojis(ctx):
+    emojis = {
+        "Alegre": "<:alegre:1371286103411392543>",
+        "Feliz": "<:feliz:1371286488293183558>",
+        "Sorprendido": "<:sorprendido:1372299120575910021>",
+        "Molesto": "<:molesto:1372299232568152165>",
+        "Triste": "<:triste:1372299333311139840>",
+        "Sonrojado": "<:sonrrojado:1372299436784353432>",
+        "Confundido": "<:confundido:1372299712757104670>",
+        "Durmiendo": "<:Durmiendo:1373047869594140813>",
+        "Enamorado": "<:Enamorado:1373049156175921152>",
+        "Riendo": "<:Riendo:1373049753600004196>",
+        "Travieso": "<:Travieso:1373051289306529892>",
+        "Cansado": "<:Cansado:1373051370784952361>",
+        "Analizando": "<:Analizando:1373051437055086682>",
+        "Asustado": "<:Asustado:1373051504373530645>",
+        "Batería baja": "<:Bateriabaja:1373051667628560515>",
+        "Temeroso": "<:Temeroso:1373051895807217764>",
+    }
+
+    mensaje = "**📌 Emojis disponibles de MarkyBot:**\n\n"
+    for nombre, emoji in emojis.items():
+        mensaje += f"{emoji} **{nombre}**: {emoji}\n"
+
+    await ctx.send(mensaje)
+
+# Comando slash /emojis
+@bot.tree.command(name="emojis", description="Muestra los emojis personalizados de MarkyBot")
+async def slash_emojis(interaction: discord.Interaction):
+    emojis = {
+        "Alegre": "<:alegre:1371286103411392543>",
+        "Feliz": "<:feliz:1371286488293183558>",
+        "Sorprendido": "<:sorprendido:1372299120575910021>",
+        "Molesto": "<:molesto:1372299232568152165>",
+        "Triste": "<:triste:1372299333311139840>",
+        "Sonrojado": "<:sonrrojado:1372299436784353432>",
+        "Confundido": "<:confundido:1372299712757104670>",
+        "Durmiendo": "<:Durmiendo:1373047869594140813>",
+        "Enamorado": "<:Enamorado:1373049156175921152>",
+        "Riendo": "<:Riendo:1373049753600004196>",
+        "Travieso": "<:Travieso:1373051289306529892>",
+        "Cansado": "<:Cansado:1373051370784952361>",
+        "Analizando": "<:Analizando:1373051437055086682>",
+        "Asustado": "<:Asustado:1373051504373530645>",
+        "Batería baja": "<:Bateriabaja:1373051667628560515>",
+        "Temeroso": "<:Temeroso:1373051895807217764>",
+    }
+
+    mensaje = "**📌 Emojis disponibles de MarkyBot:**\n\n"
+    for nombre, emoji in emojis.items():
+        mensaje += f"{emoji} **{nombre}**: {emoji}\n"
+
+    await interaction.response.send_message(mensaje)
 
 # Ejecutar el bot
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ def responder():
         respuesta = requests.post(
             "http://localhost:11434/api/generate",
             json={
-                "model": "deepseek-llm",  # Cambiado a deepseek-llm
+                "model":"gemma",  # Cambiado a deepseek-llm
                 "prompt": mensaje,
                 "stream": False
             }

@@ -1,0 +1,52 @@
+MANUAL DE USO - MARKYBOT (VERSIÓN DISCORD)
+
+REQUISITOS DEL SISTEMA
+----------------------
+- Sistema operativo: Windows 10/11
+- Python 3.11 o superior
+- Ollama instalado con modelo descargado (Deepseek, Mistral, LLaMA3, etc.)
+- Conexión local para la API Flask
+
+DEPENDENCIAS (Instalar con pip):
+--------------------------------
+pip install -r requirements.txt
+
+Si usas voz, también puedes instalar (opcional):
+- pip install pipwin
+- pipwin install pyaudio
+
+ESTRUCTURA DEL PROYECTO
+------------------------
+MarkyBotNuevo/
+├── discord_bot.py          (Bot principal de Discord)
+├── moderacion.py           (Manejo de advertencias y sanciones)
+├── .env                    (Contiene tu token, NO SE COMPARTE)
+├── .env.example            (Ejemplo vacío del .env)
+├── requirements.txt        (Librerías necesarias)
+├── README.md               (Descripción del proyecto)
+
+USO DE MARKYBOT
+---------------
+1. Coloca tu token en el archivo `.env` como:
+   DISCORD_TOKEN=tu_token_aqui
+
+2. Inicia la API Flask (ollama_api.py):
+   python ollama_api.py
+
+3. Luego inicia el bot:
+   python discord_bot.py
+
+COMANDOS DISPONIBLES
+--------------------
+- !marky / /marky: Pregunta a la IA
+- !emojis / /emojis: Muestra todos los emojis personalizados
+- Moderación automática: Detecta malas palabras y borra mensajes
+
+Notas adicionales
+Este bot funciona 100% offline con Ollama (sin necesidad de APIs de pago como OpenAI).
+Los emojis personalizados están integrados para respuestas y también accesibles por los usuarios.
+
+DESARROLLADOR
+-------------
+Creado por: markurielMC + ChatGPT
+IA Local: Ollama (Deepseek, Mistral o LLaMA3)
