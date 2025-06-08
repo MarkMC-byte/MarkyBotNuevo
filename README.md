@@ -1,5 +1,6 @@
 # 🤖 MarkyBot v2
 
+HEAD
 MarkyBot es un asistente inteligente con dos modos de funcionamiento:
 
 1. 🖥️ **Versión Desktop**: funciona en tu computadora usando micrófono, cámara, reconocimiento facial, emociones y texto.
@@ -15,6 +16,11 @@ MarkyBot-v2/
 
 
 ---
+
+# 🤖 MarkyBot (Versión completa)
+
+MarkyBot es un bot inteligente con respuestas generadas por IA local (Ollama), comandos personalizados (¡incluyendo comandos Slash!), moderación automática y emojis personalizados con estilo anime cibernético.
+
 
 ## 🧠 Requisitos generales
 
@@ -95,7 +101,41 @@ Este proyecto está bajo la licencia MIT
 2. Luego ejecuta desde la terminal:
 
 ```bash
+HEAD
 cd "C:\Users\marco.pedroza\OneDrive - INEGI\Desktop\MarkyBotNuevo"
 git add README.md
 git commit -m "Agregado README general para MarkyBot-v2 (Desktop + Discord)"
 git push
+
+ollama run deepseek-coder  # o mistral/llama3 según el modelo que uses
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+MarkyBotNuevo/
+│
+├── discord_bot.py          # Código principal del bot
+├── moderacion.py           # Sistema de advertencias/moderación
+├── .env                    # (no subir, contiene el token)
+├── .env.example            # Ejemplo de archivo .env
+├── requirements.txt        # Librerías necesarias
+├── README.md               # Este archivo
+```
+
+
+
+## ☁️ Notas adicionales
+
+- Este bot funciona **100% offline con Ollama** (sin necesidad de APIs de pago como OpenAI).
+- Los emojis personalizados están integrados para respuestas y también accesibles por los usuarios.
+
+---
+
+## 🙌 Créditos
+
+Desarrollado por [markurielMC] + ChatGPT  
+IA integrada: `Deepseek`, `LLaMA3` o `Mistral` vía [Ollama](https://ollama.com)  
+Diseño visual: Emojis de MarkyBot generados por IA (estilo anime cibernético)
