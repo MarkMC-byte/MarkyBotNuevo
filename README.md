@@ -1,7 +1,7 @@
 
 # 🤖 MarkyBot (Versión completa)
 
-MarkyBot es un bot de Discord inteligente con respuestas generadas por IA local (Ollama), comandos personalizados (¡incluyendo comandos Slash!), moderación automática y emojis personalizados con estilo anime cibernético.
+MarkyBot es un bot inteligente con respuestas generadas por IA local (Ollama), comandos personalizados (¡incluyendo comandos Slash!), moderación automática y emojis personalizados con estilo anime cibernético.
 
 
 ## ⚙️ Requisitos del sistema
