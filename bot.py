@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-from modulos.memoria import cargar_memoria, guardar_en_memoria
-from modulos.ia import responder
+from modulos.memoria import cargar_historial as cargar_memoria, guardar_historial as guardar_en_memoria
+from modulos.ia import responder_ia as responder
 from modulos.voz import hablar, escuchar_microfono
 from modulos.emociones import detectar_emocion
 from modulos.usuario import obtener_nombre_usuario
