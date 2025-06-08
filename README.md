@@ -3,18 +3,6 @@
 
 MarkyBot es un bot de Discord inteligente con respuestas generadas por IA local (Ollama), comandos personalizados (¡incluyendo comandos Slash!), moderación automática y emojis personalizados con estilo anime cibernético.
 
----
-
-## 🚀 Funcionalidades principales
-
-- 💬 Interacción con IA local usando `/marky` o `!marky`
-- 🧠 Respuestas inteligentes usando modelos locales vía Flask (ej: Deepseek o LLaMA3)
-- ❗ Moderación automática de mensajes ofensivos (con advertencias y eliminación)
-- 🎭 Emojis personalizados de MarkyBot con emociones anime
-- 💡 Comando `/emojis` y `!emojis` para ver todos los emojis disponibles
-- 🔧 Sistema de historial de conversación por usuario
-
----
 
 ## ⚙️ Requisitos del sistema
 
@@ -49,37 +37,7 @@ MarkyBotNuevo/
 ├── README.md               # Este archivo
 ```
 
----
 
-## 🧪 Comandos disponibles
-
-### 🤖 Comandos IA
-- `!marky <pregunta>` → Interactúa con la IA (vía Flask)
-- `/marky` → Comando Slash para preguntar
-
-### 🎭 Emojis personalizados
-- `!emojis` o `/emojis` → Muestra todos los emojis de MarkyBot listos para copiar
-
----
-
-## 🛠 Cómo ejecutar MarkyBot
-
-1. Asegúrate de que tu archivo `.env` contenga tu token de Discord:
-```
-DISCORD_TOKEN=tu_token_aqui
-```
-
-2. Inicia tu API Flask (si usas IA local):
-```bash
-python ollama_api.py
-```
-
-3. Inicia el bot:
-```bash
-python discord_bot.py
-```
-
----
 
 ## ☁️ Notas adicionales
 
